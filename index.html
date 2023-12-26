@@ -21,7 +21,13 @@
   <body>
     <div class="product-preview-card">
       <picture class="product-prewiew-card__picture">
-        <!-- TODO set desktop image -->
+        <source
+          srcset="
+            /img/image-product-desktop.jpg 1x,
+            /img/image-product-desktop@2x.jpg 2x
+          "
+          media="(min-width:600px)"
+        />
         <img
           class="product-preview-card__img"
           src="/img/image-product-mobile.jpg"
