@@ -1,17 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product preview card component</title>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Results summary component</title>
-</head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</body>
+  <body>
+    <div class="product-preview-card">
+      <picture class="product-prewiew-card__picture">
+        <!-- TODO set desktop image -->
+        <img
+          class="product-preview-card__img"
+          src="/img/image-product-mobile.jpg"
+          alt="Gabrielle Chanel Parfum on white surface"
+          width="343"
+          height="240"
+          srcset="
+            /img/image-product-mobile.jpg    1x,
+            /img/image-product-mobile@2x.jpg 2x
+          "
+        />
+      </picture>
 
+      <div class="product-preview-card__info">
+        <h1 class="product-preview-card__title">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="product-preview-card__category">Perfume</p>
+        <p class="product-preview-card__description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="product-preview-card__price-box">
+          <span class="product-preview-card__price">149.99</span>
+          <s class="product-preview-card__old-price">169.99</s>
+        </div>
+        <button class="button button--primary button--block" type="button">
+          <span class="button__inner">
+            <span class="button__prepend">
+              <img
+                class="button__icon"
+                src="img/icon-cart.svg"
+                alt=""
+                width="15"
+                height="16"
+                aria-hidden="true"
+              />
+            </span>
+            <span class="button__text">Add to Cart</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
